@@ -1,0 +1,24 @@
+{
+  "name": "network-api",
+  "version": "1.0.0",
+  "description": "Api",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siddz415/Network-Api.git"
+  },
+  "author": "Sidd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/siddz415/Network-Api/issues"
+  },
+  "homepage": "https://github.com/siddz415/Network-Api#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "inquirer": "^9.1.5"
+  }
+}
