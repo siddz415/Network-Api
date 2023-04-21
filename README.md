@@ -18,14 +18,14 @@ an API for a social network web application where users can share their thoughts
 * MongoDB
 * Mongoose
 ### Gif
-![](./Assets/demo.gif)
+![](./assets/social.gif)
 
 ### Screenshot
-![Screenshot of the Site](./Assets/insom.png) 
+![Screenshot of the Site](./assets/api.png) 
 
 ### links
 # github
-https://github.com/siddz415/Object-Relational-Mapping
+https://github.com/siddz415/Network-Api
 
 # video
-https://drive.google.com/file/d/1KZqC0Rb9khUgru-2Y4Ma6LhsH-nPif_9/view
+https://drive.google.com/file/d/1x9u2h6BEaXIzZmLav9l5KzGsv5GLoRzt/view
