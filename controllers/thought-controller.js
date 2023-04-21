@@ -28,8 +28,13 @@ const thoughtController = {
   createNewThought(req, res) {
     Thought.create(req.body)
       .then((dbUserData) => {
-        res.json({ message: 'Thought added' });
-      })
+        return User.findOneAndUpdate({_id: req.body.userId}, {$push: {thoughts: dbUserData._id} },{new: true})
+      }).then(dbUserData => {
+        if(!dbUserData) {
+          return res.status(404).json({message: 'No user with this id'})
+        }
+        res.json({message: 'Thought succesfully created'})
+      }) 
       .catch((err) => {
         console.log(err);
         res.status(500).json(err);
@@ -70,7 +75,7 @@ const thoughtController = {
   addReaction({params, body}, res){
     Thought.findOneAndUpdate(
         {_id: params.thoughtId},
-        {$push: {reactions: body}},
+        {$addToSet: {reactions: body}},
         { new: true, runValidators: true }
     )
     .populate({path: 'reactions', select: '-__v'})
