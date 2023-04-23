@@ -3,7 +3,11 @@ const { Thought, User } = require('../models');
 const thoughtController = {
 
   getAllThoughts(req, res) {
-    Thought.find()
+    Thought.find({})
+    .populate({
+      path: "reactions",
+      select: "-__v",
+    })
       .then((dbThoughtData) => {
         res.json(dbThoughtData);
       })
@@ -15,6 +19,10 @@ const thoughtController = {
 
   getThoughtById(req, res) {
     Thought.findOne({ _id: req.params.thoughtId })
+    .populate({
+      path: "reactions",
+      select: "-__v",
+    })
       .then((dbThoughtData) => {
         
         res.json(dbThoughtData);
@@ -78,8 +86,8 @@ const thoughtController = {
         {$addToSet: {reactions: body}},
         { new: true, runValidators: true }
     )
-    .populate({path: 'reactions', select: '-__v'})
-    .select('-__v')
+    // .populate({path: 'reactions', select: '-__v'})
+    // .select('-__v')
     .then(dbThoughtData => {
         if (!dbThoughtData) {
             res.status(404).json({ message: 'Incorrect reaction data!' });
