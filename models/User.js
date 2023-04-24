@@ -1,8 +1,8 @@
-const {Schema, Types, model} = require("mongoose") //should i write model here
+const {Schema, Types, model} = require("mongoose") 
 
 
 const userSchema = new Schema({   // rewrite
-    userName:{
+    username:{
         type:String, 
         required:true, 
         trim:true, 

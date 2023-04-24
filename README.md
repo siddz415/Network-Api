@@ -12,7 +12,6 @@ an API for a social network web application where users can share their thoughts
 
 
 ### Installation
-* Javascript
 * Node.js
 * Express.js
 * MongoDB

@@ -6,7 +6,7 @@ const reactionSchema = new Schema({
         default:() => new Types.ObjectId()
     }, 
 
-    userName:{
+    username:{
         type:String, 
         required:true, 
     },
