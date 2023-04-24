@@ -10,7 +10,7 @@ const reactionSchema = new Schema({
         type:String, 
         required:true, 
     },
-    reactionText:{
+    reaction:{
         type:String, 
         required:true,  
     }, 
@@ -29,7 +29,7 @@ const thoughtSchema = new Schema({
         trim:true, 
         unique:true, 
     },
-    thoughtText:{
+    thought:{
         type:String, 
         required:true, 
         trim:true, 
