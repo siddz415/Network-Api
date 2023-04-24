@@ -23,7 +23,7 @@ const reactionSchema = new Schema({
 } )
 
 const thoughtSchema = new Schema({
-    userName:{
+    username:{
         type:String, 
         required:true, 
         trim:true, 
